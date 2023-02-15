@@ -1,8 +1,8 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "NCS Hub V4", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "NCS Hub V4", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"}) -- Orion
 OrionLib:MakeNotification({
 	Name = "Thanks!",
-	Content = "Thank You For Using NCS V4",
+	Content = "Thank You For Using NCS V4", --Text
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -13,9 +13,9 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Main")
+Tab:AddLabel("Main")--Main
 
-local Section = Tab:AddSection({
+local Section = Tab:AddSection({ --Player
 	Name = "Player"
 })
 
@@ -28,7 +28,7 @@ Tab:AddSlider({
 	Increment = 1,
 	ValueName = "Speed",
 	Callback = function(s)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s -- speed
 	end    
 })
 
@@ -41,59 +41,8 @@ Tab:AddSlider({
 	Increment = 1,
 	ValueName = "Jump Power",
 	Callback = function(s)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s --jump Power
 	end    
-})
-
-local Section = Tab:AddSection({
-	Name = "Bloxfruit"
-})
-
-Tab:AddButton({
-	Name = "Auto Bounty(HoHo Auto Bounty)",
-	Callback = function()
-		repeat wait() until game:IsLoaded()
-        _G.HOHO_autoBounty = {
-            TransparencyGui = true,
-        
-            AutoTeam = "Pirate", -- Pirate/Marine
-            Webhook = "https://discord.com/api/webhooks/1074785165584371775/5Igv2Fyc-6e44szgPj-cVIfIMF021TSBQ8DjkuzgZVSmXfNKDim53OoZUMUbX-Ls0bda",
-            BypassTeleport = false, -- dont use
-            SkipLeopardAndBuddah = false,
-            MaxTimeTarget = 120,
-            ChatAfterKill = {"",""},
-            ["Dont attack player have Cup"] = false,
-            Character_Config = {
-                InvisibleCharacter = false, -- use this bundle: https://www.roblox.com/bundles/238/Man
-                InvisFromKen = true,
-                NoStun = true,
-            },
-            Skill_Config = {
-                ["Melee"] = {
-                    Z = {Enabled = true, Hold = 0.1},
-                    X = {Enabled = true, Hold = 0.1},
-                    C = {Enabled = true, Hold = 0.1},
-                },
-                ["Sword"] = {
-                    Z = {Enabled = true, Hold = 0.1},
-                    X = {Enabled = true, Hold = 0.1},
-                },
-                ["Gun"] = {
-                    Z = {Enabled = true, Hold = 0.1},
-                    X = {Enabled = true, Hold = 0.1},
-                },
-                ["Fruit"] = {
-                    Z = {Enabled = true, Hold = 0.1},
-                    X = {Enabled = true, Hold = 0.1},
-                    C = {Enabled = true, Hold = 0.1},
-                    V = {Enabled = true, Hold = 0.1},
-                    F = {Enabled = false, Hold = 0.1},
-                },
-            },
-        }
-    
-loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-  	end    
 })
 
 local Section = Tab:AddSection({
@@ -106,7 +55,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddLabel("These are not mine scripts")
+Tab:AddLabel("These are not mine scripts") --other scripts
 
 local Section = Tab:AddSection({
 	Name = "Universal"
@@ -197,7 +146,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Dragonclaw is buged!",
+	Name = "Dragonclaw is bugged!",
 	Callback = function()
 		
   	end    
@@ -265,8 +214,11 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddLabel("Gui: Orion ")
+
 Tab:AddLabel("Script: Me ")
+
 Tab:AddLabel("Other Scripts: I dont know all names ")
+
 Tab:AddLabel("Update: 4")
 
 Tab:AddButton({
@@ -283,3 +235,5 @@ Tab:AddButton({
 })  
 
 OrionLib:Init()
+
+-- Made By Biscotto
