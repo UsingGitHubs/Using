@@ -1,0 +1,170 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "NCS Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Thanks!",
+	Content = "Thank You For Using NCS V4",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Main")
+
+
+local Section = Tab:AddSection({
+	Name = "Main"
+})
+
+local Tab = Window:MakeTab({
+	Name = "Other Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("These are not mine scripts")
+
+local Section = Tab:AddSection({
+	Name = "Universal"
+})
+
+Tab:AddButton({
+	Name = "Infinity Yield!",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Bloxfruits"
+})
+
+Tab:AddButton({
+	Name = "Mukuro Hub!(key)",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Murder Mystery 2"
+})
+
+Tab:AddButton({
+	Name = "Eclipse Hub",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "SCP 3008"
+})
+
+Tab:AddButton({
+	Name = "Zeerox Hub",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RunDTM/scripts/main/3008.lua'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Doors"
+})
+
+Tab:AddButton({
+	Name = "Doors Script",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua'),true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "My Things",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Bloxfruits"
+})
+
+local Section = Tab:AddSection({
+	Name = "Fightingstyles"
+})
+
+Tab:AddButton({
+	Name = "Blackleg!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyBlackLeg")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Electro!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectro")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fishman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyFishmanKarate")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dragonclaw is buged!",
+	Callback = function()
+		
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Superhuman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuySuperhuman")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "DeathStep!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDeathStep")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sharkman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Electric Claw!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dragon Talon!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyFishmanDragonTalon")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "GodHuman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyGodhuman")
+  	end    
+})
+
+OrionLib:Init()
