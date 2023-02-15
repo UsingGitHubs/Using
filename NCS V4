@@ -1,10 +1,10 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "NCS Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "NCS Hub V4", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
 	Name = "Thanks!",
 	Content = "Thank You For Using NCS V4",
 	Image = "rbxassetid://4483345998",
-	Time = 10
+	Time = 5
 })
 
 local Tab = Window:MakeTab({
@@ -15,6 +15,35 @@ local Tab = Window:MakeTab({
 
 Tab:AddLabel("Main")
 
+local Section = Tab:AddSection({
+	Name = "Player"
+})
+
+Tab:AddSlider({
+	Name = "Speed",
+	Min = 16,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+	end    
+})
+
+Tab:AddSlider({
+	Name = "Jump Power",
+	Min = 50,
+	Max = 350,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jump Power",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+	end    
+})
 
 local Section = Tab:AddSection({
 	Name = "Main"
@@ -89,9 +118,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = Tab:AddSection({
-	Name = "Bloxfruits"
-})
+Tab:AddLabel("Bloxfruits")
 
 local Section = Tab:AddSection({
 	Name = "Fightingstyles"
@@ -166,5 +193,42 @@ Tab:AddButton({
 		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyGodhuman")
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Destroy Gui!",
+	Callback = function()
+		OrionLib:Destroy()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Gui: Orion ")
+Tab:AddLabel("Script: Me ")
+Tab:AddLabel("Other Scripts: I dont know all names ")
+Tab:AddLabel("Update: 4")
+
+Tab:AddButton({
+	Name = "Join Discord!",
+	Callback = function()
+		setclipboard("https://discord.gg/wKK8hQ2PFG")
+		OrionLib:MakeNotification({
+	Name = "Discord",
+	Content = "Discord Link Copied To Clipboard",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+  	end    
+})  
 
 OrionLib:Init()
