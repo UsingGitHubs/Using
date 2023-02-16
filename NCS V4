@@ -68,6 +68,132 @@ Tab:AddButton({
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Bloxfruits"
+})
+
+Tab:AddButton({
+	Name = "Mukuro Hub!(key)",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Murder Mystery 2"
+})
+
+Tab:AddButton({
+	Name = "Eclipse Hub",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "SCP 3008"
+})
+
+Tab:AddButton({
+	Name = "Zeerox Hub",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RunDTM/scripts/main/3008.lua'),true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Doors"
+})
+
+Tab:AddButton({
+	Name = "Doors Script",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua'),true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "My Things",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Bloxfruits")
+
+local Section = Tab:AddSection({
+	Name = "Fightingstyles"
+})
+
+Tab:AddButton({
+	Name = "Blackleg!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyBlackLeg")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Electro!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectro")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fishman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyFishmanKarate")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dragonclaw is bugged!",
+	Callback = function()
+		
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Superhuman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuySuperhuman")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "DeathStep!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDeathStep")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sharkman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Electric Claw!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dragon Talon!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyFishmanDragonTalon")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "GodHuman!",
+	Callback = function()
+		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyGodhuman")
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Settings",
 	Icon = "rbxassetid://4483345998",
