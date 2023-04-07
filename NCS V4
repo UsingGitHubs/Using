@@ -84,7 +84,6 @@ Tab:AddButton({
 				v.shotrate = 0.001
 				v.damage = 10000
 				v.velocity = 10000
-				v.zoomAmount = 3
 				v.automatic = true
 			end
 		end
