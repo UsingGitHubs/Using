@@ -120,6 +120,14 @@ local Tab = Window:MakeTab({
 
 Tab:AddLabel("Bloxfruits")
 
+Tab:AddButton({
+	Name = "Second Sea",
+	Callback = function()
+		local TeleportService = game:GetService("TeleportService")
+		local placeID = 4442272183		
+  	end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Fightingstyles"
 })
@@ -191,6 +199,29 @@ Tab:AddButton({
 	Name = "GodHuman!",
 	Callback = function()
 		game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyGodhuman")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "BIG Paintball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Aimbot"
+})
+
+Tab:AddButton({
+	Name = "Aimbot",
+	Callback = function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/itUdhHyb'))()
+		OrionLib:MakeNotification({
+			Name = "Thanks!",
+			Content = "Not my aimbot credits: Anthony", --Text
+			Image = "rbxassetid://4483345998",
+			Time = 5
+		})
   	end    
 })
 
