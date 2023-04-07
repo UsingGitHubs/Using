@@ -15,6 +15,23 @@ local Tab = Window:MakeTab({
 
 Tab:AddLabel("Main")--Main
 
+local Section = Tab:AddSection({
+	Name = "Aimbot"
+})
+
+Tab:AddButton({
+	Name = "Aimbot",
+	Callback = function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/itUdhHyb'))()
+		OrionLib:MakeNotification({
+			Name = "Thanks!",
+			Content = "Not my aimbot credits: Anthony", --Text
+			Image = "rbxassetid://4483345998",
+			Time = 5
+		})
+  	end    
+})
+
 local Section = Tab:AddSection({ --Player
 	Name = "Player"
 })
@@ -202,28 +219,7 @@ Tab:AddButton({
   	end    
 })
 
-local Tab = Window:MakeTab({
-	Name = "BIG Paintball",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 
-local Section = Tab:AddSection({
-	Name = "Aimbot"
-})
-
-Tab:AddButton({
-	Name = "Aimbot",
-	Callback = function()
-		loadstring(game:HttpGet('https://pastebin.com/raw/itUdhHyb'))()
-		OrionLib:MakeNotification({
-			Name = "Thanks!",
-			Content = "Not my aimbot credits: Anthony", --Text
-			Image = "rbxassetid://4483345998",
-			Time = 5
-		})
-  	end    
-})
 
 local Tab = Window:MakeTab({
 	Name = "Settings",
@@ -250,7 +246,7 @@ Tab:AddLabel("Script: Me ")
 
 Tab:AddLabel("Other Scripts: I dont know all names ")
 
-Tab:AddLabel("Update: 4")
+Tab:AddLabel("Update: 4.1")
 
 Tab:AddButton({
 	Name = "Join Discord!",
