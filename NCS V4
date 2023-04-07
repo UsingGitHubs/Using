@@ -67,6 +67,31 @@ local Section = Tab:AddSection({
 })
 
 local Tab = Window:MakeTab({
+	Name = "BIG Paintball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "weapon Config"
+})
+
+Tab:AddButton({
+	Name = "Best Config",
+	Callback = function()
+		for i,v in next, getgc(true) do
+		end    if type(v) == "table" and rawget(v, "damage") then
+				v.shotrate = 0.001
+				v.damage = 10000
+				v.velocity = 10000
+				v.zoomAmount = 3
+				v.automatic = true
+			end
+		
+  	end    
+})
+
+local Tab = Window:MakeTab({
 	Name = "Other Scripts",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
