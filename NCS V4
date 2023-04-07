@@ -22,7 +22,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Aimbot",
 	Callback = function()
-		loadstring(game:HttpGet('https://pastebin.com/raw/itUdhHyb'))()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/itUdhHyb')))()
 		OrionLib:MakeNotification({
 			Name = "Thanks!",
 			Content = "Not my aimbot credits: Anthony", --Text
@@ -80,14 +80,14 @@ Tab:AddButton({
 	Name = "Best Config",
 	Callback = function()
 		for i,v in next, getgc(true) do
-		end    if type(v) == "table" and rawget(v, "damage") then
+			if type(v) == "table" and rawget(v, "damage") then
 				v.shotrate = 0.001
 				v.damage = 10000
 				v.velocity = 10000
 				v.zoomAmount = 3
 				v.automatic = true
 			end
-		
+		end
   	end    
 })
 
